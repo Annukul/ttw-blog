@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo&family=PT+Serif:wght@700&family=Playfair+Display&family=Playfair+Display+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Titillium+Web:ital,wght@1,300&display=swap");
+:root {
+  --nav-color-: #dce2f0;
+  --nav-text-color-: #50586c;
+  --heading-font-: "Playfair Display SC", serif;
+  --heading-font-alt-: "Playfair Display", serif;
+  --para-font-: "Arimo", sans-serif;
+  --main-head-font-: "PT Serif", serif;
+  --content-background-: #f4f4f4;
+  --content-inside-: #ffffff;
+  --cats-: "Raleway", sans-serif;
+  --yellow-: #ffd204;
+  --orange-: #ed0505;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  min-width: 100vw;
+  max-width: 100vw;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: var(--main-head-font-);
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+nav {
+  display: flex;
+  width: 100%;
+  padding: 0 1em;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--nav-color-);
+}
+nav ul li {
+  display: block;
+}
+.nav-links {
+  color: var(--nav-text-color-);
+  font-size: 1.5rem;
+  font-family: var(--para-font-);
+  padding: 1em 0.5em;
+}
+.nav-links:hover {
+  color: var(--orange-);
+}
+.head-shadow {
+  color: var(--yellow-);
+  text-shadow: 2px 2px var(--orange-);
+}
+
+.head-img {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  padding: 1em 0;
+}
+.head-img img {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Cat and Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--content-background-);
+}
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3em;
+  background: var(--content-background-);
+}
+.categories h1 {
+  font-family: var(--cats-);
+  color: var(--yellow-);
+  text-shadow: 2px 2px var(--orange-);
+}
+.categories a {
+  display: inline-block;
+  color: var(--nav-text-color-);
+  font-size: 1.5rem;
+  font-family: var(--para-font-);
+  padding: 0.5em 1em;
+  /* padding-bottom: 1em; */
+}
+.categories a:hover {
+  color: var(--orange-);
+}
+.categories ul {
+  border-top: 2px solid var(--yellow-);
+  border-left: 2px solid var(--yellow-);
+  border-right: 2px solid var(--yellow-);
+  border-radius: 3px;
+  background: var(--content-inside-);
+}
+
+/* Posts */
+.posts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Post */
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 3em;
+  border-top: 2px solid var(--yellow-);
+  background: var(--content-inside-);
+}
+.post_content {
+  display: flex;
+  width: 100%;
+  padding: 1em 0;
+  justify-content: space-evenly;
+}
+.post_media {
+  width: 30%;
+}
+.post_media img {
+  width: 100%;
+  object-fit: contain;
+}
+.post_text {
+  width: 65%;
+  border-bottom: 1px solid var(--nav-text-color-);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.post_text small {
+  font-size: 1rem;
+  font-family: "Titillium Web", sans-serif;
+}
+.post_text p {
+  font-size: 1.5rem;
+  font-family: "Titillium Web", sans-serif;
+  color: var(--nav-text-color-);
+  margin-bottom: 0.5em;
+}
+.post_text h2 {
+  font-family: "Merriweather", serif;
+}
+.post_text h2:hover {
+  color: var(--orange-);
+}
+
+/* POSTS BY A SINGLE CATEGORY */
+.posts-by {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 3em 0;
+}
+
+.posts-by h1 {
+  font-family: var(--cats-);
+  color: var(--yellow-);
+  text-shadow: 2px 2px var(--orange-);
+  text-align: center;
+}
+
+.post-by {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+.center-by {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2em 4em;
+  border-top: 2px solid var(--yellow-);
+}
+.center-by-left,
+.center-by-right {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.center-by-left h1,
+.center-by-right h1 {
+  color: var(--nav-text-color-);
+  text-shadow: none;
+}
+
+.post-by {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 2em;
+}
+.post-by-media {
+  width: 100%;
+}
+.post-by-media img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.post-by-text small {
+  font-size: 1rem;
+  font-family: "Titillium Web", sans-serif;
+}
+.post-by-text p {
+  font-size: 1.5rem;
+  font-family: "Titillium Web", sans-serif;
+  color: var(--nav-text-color-);
+  margin-bottom: 0.5em;
+}
+.post-by-text h2 {
+  font-family: "Merriweather", serif;
+}
+.post-by-text h2:hover {
+  color: var(--orange-);
+}
+
+footer {
+  text-align: center;
+}
+
+/* SHOW POST PAGE */
+.post-header {
+  width: 100%;
+  padding: 1em 2em;
+  border-bottom: 2px solid var(--yellow-);
+  position: fixed;
+  background: #ffffff;
+}
+.post-header a {
+  font-family: var(--para-font-);
+  padding: 0 1em;
+}
+.post-header a:hover {
+  color: var(--orange-);
+}
+
+.show-post {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--content-background-);
+}
+.show-post-in {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  background: var(--content-background-);
+}
+.show-post-media {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2em;
+  border-bottom: 2px solid var(--yellow-);
+  height: 100vh;
+}
+.sp-img {
+  width: 60%;
+  height: 100%;
+}
+.show-post-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sp-h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 40%;
+  height: 100%;
+  padding: 0 1em;
+  background: #ffffff;
+}
+.sp-h2 p {
+  margin-bottom: 1em;
+  font-family: var(--para-font-);
+}
+.sp-h2 h2 {
+  font-family: "Merriweather", serif;
+  margin-bottom: 0.5em;
+  font-size: 3rem;
+}
+.show-post-text {
+  width: 50%;
+  margin-left: 5em;
+  font-family: var(--para-font-);
+}
